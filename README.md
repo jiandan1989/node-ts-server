@@ -1,6 +1,6 @@
 # node-ts-server
 
-- [heroku](https://dashboard.heroku.com/apps): 注册 heroku
+- [heroku](https://signup.heroku.com/): 注册 heroku
 - [当前已经部署后的一个测试地址](https://stark-garden-78805.herokuapp.com/)
 - 安装 heroku cli mac 使用 brew 安装
 
