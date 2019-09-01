@@ -1,0 +1,32 @@
+{
+  "name": "node-ts-server",
+  "version": "1.0.0",
+  "description": "服务于测试其他静态页面",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niexiaofei1988/node-ts-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/niexiaofei1988/node-ts-server/issues"
+  },
+  "homepage": "https://github.com/niexiaofei1988/node-ts-server#readme",
+  "dependencies": {
+    "koa": "^2.8.1",
+    "typescript": "^3.6.2"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.0.49",
+    "@types/node": "^12.7.3",
+    "chalk": "^2.4.2",
+    "nodemon": "^1.19.1",
+    "ts-node": "^8.3.0"
+  }
+}
