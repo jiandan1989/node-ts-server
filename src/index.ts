@@ -1,4 +1,4 @@
-import Koa from 'koa';
+import * as Koa from 'koa';
 import chalk from 'chalk';
 
 import { IP } from './utils';

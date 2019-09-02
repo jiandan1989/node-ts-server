@@ -2,7 +2,7 @@
   "name": "node-ts-server",
   "version": "1.0.0",
   "description": "服务于测试其他静态页面",
-  "main": "index.js",
+  "main": "src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/index.ts",
