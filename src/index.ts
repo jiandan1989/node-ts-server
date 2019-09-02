@@ -1,11 +1,15 @@
 import Koa from 'koa';
 import * as http from 'http';
+import * as path from 'path';
 import chalk from 'chalk';
+import views from 'koa-views';
 
 const app = new Koa();
 
-app.use(async (ctx: any) => {
-  ctx.body = 'Hello World';
+app.use(views(path.resolve(__dirname, './template/'), { extension: 'ejs' }));
+
+app.use(async function(ctx) {
+  await ctx.render('index', { metaInfo: { title: 'home' } });
 });
 
 app.on('error', (err: any) => {
