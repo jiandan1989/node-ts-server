@@ -4,13 +4,12 @@ import chalk from 'chalk';
 import { IP } from './utils';
 
 const app = new Koa();
-const { log } = console;
 
-app.use(async (ctx) => {
+app.use(async (ctx: any) => {
   ctx.body = 'Hello World';
 });
 
-app.on('error', (err) => {
+app.on('error', (err: any) => {
   console.log(chalk.bgBlue('server error', err));
 });
 
