@@ -2,11 +2,13 @@
   "name": "node-ts-server",
   "version": "1.0.0",
   "description": "服务于测试其他静态页面",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/index.ts",
-    "lint": "tslint -c tslint.json 'src/**/*.ts'"
+    "build-ts": "tsc",
+    "postinstall": "npm run build-ts",
+    "start": "npm run serve",
+    "serve": "node dist/index.js",
+    "start:local": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -21,31 +23,31 @@
   "homepage": "https://github.com/niexiaofei1988/node-ts-server#readme",
   "dependencies": {
     "chalk": "^2.4.2",
-    "ejs": "^2.6.2",
-    "koa": "^2.8.1",
+    "ejs": "^2.7.4",
+    "koa": "^2.11.0",
     "koa-body": "^4.1.1",
     "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0",
-    "koa-views": "^6.2.0",
+    "koa-views": "^6.2.1",
     "koa2-cors": "^2.0.6",
     "mongoose": "^5.6.13",
-    "nodemon": "^1.19.1",
-    "ts-node": "^8.3.0",
-    "typescript": "^3.6.2",
+    "nodemon": "^1.19.4",
+    "ts-node": "^8.6.1",
+    "typescript": "^3.7.4",
     "uuid": "^3.3.3"
   },
   "devDependencies": {
-    "@types/koa": "^2.0.49",
+    "@types/koa": "^2.11.0",
     "@types/koa-bodyparser": "^4.3.0",
     "@types/koa-cors": "^0.0.0",
-    "@types/koa-router": "^7.0.42",
-    "@types/koa-views": "^2.0.3",
+    "@types/koa-router": "^7.4.0",
+    "@types/koa-views": "^2.0.4",
     "@types/koa2-cors": "^2.0.1",
-    "@types/node": "^12.7.3",
-    "@types/uuid": "^3.4.5",
-    "prettier": "^1.18.2",
+    "@types/node": "^12.12.24",
+    "@types/uuid": "^3.4.6",
+    "prettier": "^1.19.1",
     "tslint": "^5.19.0",
     "tslint-config-prettier": "^1.18.0",
-    "tslint-plugin-prettier": "^2.0.1"
+    "tslint-plugin-prettier": "^2.1.0"
   }
 }

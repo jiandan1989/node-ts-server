@@ -3,6 +3,7 @@ import http from 'http';
 import chalk from 'chalk';
 import cors from 'koa2-cors';
 import userRoutes from './routes/userRouter';
+import homeRoutes from './routes/homeRouter';
 import bodyParser from './middlewares/bodyParser';
 import { config } from './config';
 
@@ -26,6 +27,7 @@ app.use(async (ctx: { set: (arg0: string, arg1: string) => void }, next: () => v
   next();
 });
 app.use(userRoutes);
+app.use(homeRoutes);
 app.use(bodyParser);
 
 // 输入模板
